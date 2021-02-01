@@ -25,6 +25,8 @@ namespace dbAPI.Views.Pages.GetAPI
     /// </summary>
     public partial class CarViewPage : Page
     {
+        private static readonly HttpClient client = new HttpClient();
+
         public ObservableCollection<Car> Cars { get; set; }
         public CarViewPage()
         {
@@ -34,15 +36,23 @@ namespace dbAPI.Views.Pages.GetAPI
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("http://solutions2019.hakta.pro/api/getFines?participant=01");
-            var response = await client.GetAsync(client.BaseAddress);
-            var result = await response.Content.ReadAsStringAsync();
-            var stream = new MemoryStream(Encoding.UTF8.GetBytes(result));
-            var serializi = new DataContractJsonSerializer(typeof(ServerResponse<Car>));
-            var response_object = (ServerResponse<Car>)serializi.ReadObject(stream);
-            Cars = new ObservableCollection<Car>(response_object.data);
-            this.DataContext = this;
+            string url = "http://solutions2019.hakta.pro/api/getFines?participant=01";
+            try
+            {
+                using (var response = await client.GetAsync(url))
+                using (var stream = await response.Content.ReadAsStreamAsync())
+                {
+                    var serializi = new DataContractJsonSerializer(typeof(ServerResponse<Car>));
+                    var response_object = (ServerResponse<Car>)serializi.ReadObject(stream);
+                    Cars = new ObservableCollection<Car>(response_object.data);
+                    this.DataContext = this;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
