@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище dbAPIModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="F_Car">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="car_num" Type="nvarchar(max)" />
+    <Property Name="create_date" Type="nvarchar(max)" />
+    <Property Name="licence_num" Type="nvarchar(max)" />
+    <Property Name="photo" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="Хранилище dbAPIModelContainer">
+    <EntitySet Name="F_Car" EntityType="Self.F_Car" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

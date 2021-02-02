@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbAPIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="F_Car">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="car_num" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="create_date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="licence_num" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="dbAPIEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="F_Car" EntityType="Self.F_Car" />
+  </EntityContainer>
+</Schema>

@@ -1,22 +1,15 @@
-﻿using dbAPI.Models;
+﻿using dbAPI.Context;
+using dbAPI.DbModel;
+using dbAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.Serialization.Json;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Runtime.Serialization.Json;
-using System.Windows.Shapes;
 
 namespace dbAPI.Views.Pages.GetAPI
 {
@@ -28,10 +21,11 @@ namespace dbAPI.Views.Pages.GetAPI
         private static readonly HttpClient client = new HttpClient();
 
         public ObservableCollection<Car> Cars { get; set; }
+        //public IEnumerable<Car> Cars { get; set; }
+        //public List<Car> Cars { get; set; }
         public CarViewPage()
         {
             InitializeComponent();
-            Cars = new ObservableCollection<Car>();
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
@@ -47,10 +41,11 @@ namespace dbAPI.Views.Pages.GetAPI
                     Cars = new ObservableCollection<Car>(response_object.data);
                     this.DataContext = this;
                 }
+                DbContextObject.db.F_Car.AddRange(Cars.Select(car => new DbModel.F_Car { id = int.Parse(car.id), car_num = car.car_num, create_date = car.create_date, licence_num = car.licence_num, photo = car.photo }));
+                await DbContextObject.db.SaveChangesAsync();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
                 throw;
             }
         }
