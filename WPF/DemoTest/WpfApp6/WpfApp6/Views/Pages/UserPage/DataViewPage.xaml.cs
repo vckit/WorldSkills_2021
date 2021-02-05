@@ -28,6 +28,7 @@ namespace WpfApp6.Views.Pages.UserPage
         {
             InitializeComponent();
             Services = new ObservableCollection<Service>(DbContextObject.db.Service);
+            var counts = DbContextObject.db.Service.Count().ToString();
             this.DataContext = this;
         }
     }
