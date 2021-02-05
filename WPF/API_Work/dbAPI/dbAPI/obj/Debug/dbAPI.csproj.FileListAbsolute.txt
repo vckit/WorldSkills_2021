@@ -25,3 +25,30 @@ D:\Downloads\Git Download\PornHub\WPF\API_Work\dbAPI\dbAPI\bin\Debug\EntityFrame
 D:\Downloads\Git Download\PornHub\WPF\API_Work\dbAPI\dbAPI\bin\Debug\ru\EntityFramework.resources.dll
 D:\Downloads\Git Download\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI_Content.g.cs
 D:\Downloads\Git Download\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI.csproj.CopyComplete
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\bin\Debug\dbAPI.exe.config
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\bin\Debug\dbAPI.exe
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\bin\Debug\dbAPI.pdb
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\bin\Debug\EntityFramework.dll
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\bin\Debug\EntityFramework.SqlServer.dll
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\bin\Debug\EntityFramework.xml
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\bin\Debug\EntityFramework.SqlServer.xml
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\bin\Debug\ru\EntityFramework.resources.dll
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI.csprojAssemblyReference.cache
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\Views\Pages\GetAPI\CarViewPage.g.cs
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\Views\Pages\GetAPI\NavigationPage.g.cs
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\Views\Windows\MainWindow.g.cs
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\App.g.cs
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI_Content.g.cs
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI_MarkupCompile.cache
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI_MarkupCompile.lref
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\App.baml
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\Views\Pages\GetAPI\CarViewPage.baml
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\Views\Pages\GetAPI\NavigationPage.baml
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\Views\Windows\MainWindow.baml
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI.g.resources
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI.Properties.Resources.resources
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI.csproj.GenerateResource.cache
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI.csproj.CoreCompileInputs.cache
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI.csproj.CopyComplete
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI.exe
+D:\Develop\C#\WPF\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI.pdb

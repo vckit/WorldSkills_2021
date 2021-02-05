@@ -41,6 +41,7 @@ namespace dbAPI.Views.Pages.GetAPI
                     Cars = new ObservableCollection<Car>(response_object.data);
                     this.DataContext = this;
                 }
+
                 DbContextObject.db.F_Car.AddRange(Cars.Select(car => new DbModel.F_Car { id = int.Parse(car.id), car_num = car.car_num, create_date = car.create_date, licence_num = car.licence_num, photo = car.photo }));
                 await DbContextObject.db.SaveChangesAsync();
             }
