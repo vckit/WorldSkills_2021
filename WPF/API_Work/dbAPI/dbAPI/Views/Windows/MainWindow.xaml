@@ -8,6 +8,8 @@
         WindowStartupLocation="CenterScreen"
         Title="{Binding ElementName=MainFrame, Path=Content.Title}" Height="450" Width="800">
     <Grid>
+        <!--Натягиваем очко-->
+        <!--Съмки начинаются, Актеры: Магомедов Магомед и Муминат-->
         <Frame Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
