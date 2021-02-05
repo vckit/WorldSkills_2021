@@ -18,3 +18,10 @@ D:\Downloads\Git Download\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI.exe
 D:\Downloads\Git Download\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI.pdb
 D:\Downloads\Git Download\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\Views\Pages\GetAPI\NavigationPage.g.cs
 D:\Downloads\Git Download\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\Views\Pages\GetAPI\NavigationPage.baml
+D:\Downloads\Git Download\PornHub\WPF\API_Work\dbAPI\dbAPI\bin\Debug\EntityFramework.dll
+D:\Downloads\Git Download\PornHub\WPF\API_Work\dbAPI\dbAPI\bin\Debug\EntityFramework.SqlServer.dll
+D:\Downloads\Git Download\PornHub\WPF\API_Work\dbAPI\dbAPI\bin\Debug\EntityFramework.xml
+D:\Downloads\Git Download\PornHub\WPF\API_Work\dbAPI\dbAPI\bin\Debug\EntityFramework.SqlServer.xml
+D:\Downloads\Git Download\PornHub\WPF\API_Work\dbAPI\dbAPI\bin\Debug\ru\EntityFramework.resources.dll
+D:\Downloads\Git Download\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI_Content.g.cs
+D:\Downloads\Git Download\PornHub\WPF\API_Work\dbAPI\dbAPI\obj\Debug\dbAPI.csproj.CopyComplete

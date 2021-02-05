@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище dbAPIModelContainer" CdmEntityContainer="dbAPIEntities">
+    <EntitySetMapping Name="F_Car">
+      <EntityTypeMapping TypeName="dbAPIModel.F_Car">
+        <MappingFragment StoreEntitySet="F_Car">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="car_num" ColumnName="car_num" />
+          <ScalarProperty Name="create_date" ColumnName="create_date" />
+          <ScalarProperty Name="licence_num" ColumnName="licence_num" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
