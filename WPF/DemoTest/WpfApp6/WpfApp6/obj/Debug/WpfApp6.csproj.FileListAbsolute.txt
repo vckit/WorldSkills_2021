@@ -50,3 +50,29 @@ D:\Develop\C#\WPF\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6.csproj.
 D:\Develop\C#\WPF\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6.csproj.CopyComplete
 D:\Develop\C#\WPF\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6.exe
 D:\Develop\C#\WPF\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6.pdb
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\bin\Debug\WpfApp6.exe.config
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\bin\Debug\WpfApp6.exe
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\bin\Debug\WpfApp6.pdb
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\bin\Debug\EntityFramework.dll
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\bin\Debug\EntityFramework.SqlServer.dll
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\bin\Debug\EntityFramework.xml
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\bin\Debug\EntityFramework.SqlServer.xml
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\bin\Debug\ru\EntityFramework.resources.dll
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6.csprojAssemblyReference.cache
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\Views\Pages\UserPage\DataViewPage.g.cs
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\Views\Windows\MainWindow.g.cs
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\App.g.cs
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6_Content.g.cs
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\GeneratedInternalTypeHelper.g.cs
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6_MarkupCompile.cache
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6_MarkupCompile.lref
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\App.baml
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\Views\Pages\UserPage\DataViewPage.baml
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\Views\Windows\MainWindow.baml
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6.g.resources
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6.Properties.Resources.resources
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6.csproj.GenerateResource.cache
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6.csproj.CoreCompileInputs.cache
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6.csproj.CopyComplete
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6.exe
+A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6.pdb
