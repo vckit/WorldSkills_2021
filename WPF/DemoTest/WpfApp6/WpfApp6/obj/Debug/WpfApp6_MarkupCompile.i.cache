@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Develop\C#\WPF\Learn\WpfApp6\WpfApp6\obj\Debug\
+D:\Develop\C#\WPF\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\
 WpfApp6
 none
 false
 DEBUG;TRACE
-D:\Develop\C#\WPF\Learn\WpfApp6\WpfApp6\App.xaml
-226768215
+D:\Develop\C#\WPF\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\App.xaml
+4-835686467
 3503882006
-251731826774
-18431838081
-Views\Pages\UserPage\DataViewPage.xaml;Views\Windows\MainWindow.xaml;
+27141596573
+18-1683891127
+Views\Pages\AdminPage\DashboardPage.xaml;Views\Pages\AdminPage\LoginPage.xaml;Views\Pages\UserPage\DataViewPage.xaml;Views\Windows\MainWindow.xaml;
 
-False
+True
 

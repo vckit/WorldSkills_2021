@@ -9,5 +9,15 @@
             <Setter Property="Height" Value="30"/>
             <Setter Property="FontSize" Value="16"/>
         </Style>
+
+
+        <Style TargetType="TextBox" x:Key="FunctionTextBoxStyle">
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="PasswordBox" x:Key="FunctionPasswordBoxStyle">
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
     </Application.Resources>
 </Application>

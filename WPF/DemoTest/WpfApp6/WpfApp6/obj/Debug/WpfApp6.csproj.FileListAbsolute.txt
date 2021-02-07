@@ -76,3 +76,7 @@ A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\o
 A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6.csproj.CopyComplete
 A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6.exe
 A:\Develop\C#\My Doom\C-Sharp\Abdulkhakim\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\WpfApp6.pdb
+D:\Develop\C#\WPF\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\Views\Pages\AdminPage\LoginPage.g.cs
+D:\Develop\C#\WPF\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\Views\Pages\AdminPage\LoginPage.baml
+D:\Develop\C#\WPF\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\Views\Pages\AdminPage\DashboardPage.g.cs
+D:\Develop\C#\WPF\PornHub\WPF\DemoTest\WpfApp6\WpfApp6\obj\Debug\Views\Pages\AdminPage\DashboardPage.baml
