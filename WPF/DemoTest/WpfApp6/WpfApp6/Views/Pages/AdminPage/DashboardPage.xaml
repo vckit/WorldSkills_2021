@@ -10,6 +10,8 @@
 
     <Page.Resources>
         <a:ConverterMunites x:Key="Converter"/>
+        <a:ConverterBGPrice x:Key="BGPrice"/>
+        <a:FGTime x:Key="FGTime"/>
     </Page.Resources>
 
     <Grid>
@@ -82,8 +84,10 @@
                                             Margin="0,0,0,10">
                                     <Label Content="{Binding Title}" ContentStringFormat="Наименование услуги: {0}" FontSize="18"/>
                                     <Label Content="{Binding Cost}" ContentStringFormat="Стоимость: {0:C}" FontSize="14"/>
-                                    <Label Content="{Binding DurationInSeconds, Converter={StaticResource ResourceKey=Converter}}" FontSize="14"/>
-                                    <Label Content="{Binding Discount}" ContentStringFormat="* Скидка: {0}%" FontSize="14"/>
+                                    <Label Content="{Binding DurationInSeconds, Converter={StaticResource ResourceKey=Converter}}" Foreground="{Binding DurationInSeconds, Converter={StaticResource FGTime}}" FontSize="14"/>
+
+                                    <Label Content="{Binding Discount}" Foreground="{Binding Discount, Converter={StaticResource BGPrice}}" ContentStringFormat="* Скидка: {0}%"  FontSize="14"/>
+
                                 </StackPanel>
                                 <StackPanel Grid.Row="1"
                                             Orientation="Horizontal"

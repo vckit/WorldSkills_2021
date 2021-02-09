@@ -85,7 +85,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Context\DbContextObject.cs" />
+    <Compile Include="ConverterBGPrice.cs" />
     <Compile Include="ConverterMunites.cs" />
+    <Compile Include="FGTime.cs" />
     <Compile Include="Model\Client.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -207,9 +209,7 @@
     <Resource Include="Resources\Французский язык.jpg" />
     <Resource Include="Resources\Японский язык.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Model\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

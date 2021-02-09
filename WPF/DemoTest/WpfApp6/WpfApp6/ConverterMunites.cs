@@ -9,11 +9,12 @@ namespace WpfApp6
         public object Convert(object value, Type targetType, object parametr, CultureInfo culture)
         {
             if (value == null)
-            {
                 return "Информация отсутствует";
-            }
 
             int seconds = int.Parse(value.ToString());
+            if (seconds < 0)
+                return 0;
+
             if (seconds > 60 && seconds < 3600)
                 return (seconds / 60 + " Минут ");
             else if (seconds >= 3600 && seconds < 7200)

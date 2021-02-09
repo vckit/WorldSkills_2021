@@ -24,11 +24,20 @@ namespace WpfApp6.Model
         public int ID { get; set; }
         public string Title { get; set; }
         public string MainImagePath { get; set; }
-        public int DurationInSeconds { get; set; }
+        private int _durationInSeconds;
+        public int DurationInSeconds 
+        {
+            get { return _durationInSeconds; }
+            set { _durationInSeconds = value; } 
+        }
         public decimal Cost { get; set; }
-        public Nullable<double> Discount { get; set; }
+        private double _discount;
+        public Nullable<double> Discount 
+        {
+            get { return _discount; }
+            set { _discount = (double)value; }
+        }
         public string Description { get; set; }
-    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ClientService> ClientService { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

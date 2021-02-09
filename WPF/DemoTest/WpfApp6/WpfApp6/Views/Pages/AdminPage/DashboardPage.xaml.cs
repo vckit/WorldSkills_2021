@@ -1,23 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using WpfApp6.Context;
 using WpfApp6.Model;
-using WpfApp6.Views.Pages.UserPage;
 
 namespace WpfApp6.Views.Pages.AdminPage
 {
@@ -28,30 +16,14 @@ namespace WpfApp6.Views.Pages.AdminPage
     {
 
         #region Область объявления переменных
-        private ObservableCollection<Service> _services;
         public int counts { get; set; }
-        public ObservableCollection<Service> Services
-        {
-            get => _services; 
-            set
-            {
-                _services = value;
-                OnPropertyChanged();
-            }
-        }
-
-        void OnPropertyChanged()
-        {
-            counts = Services.Count();
-        }
+        public ObservableCollection<Service> Services { get; set; }
 
         public Service SelectedService { get; set; }
         #endregion
         public DashboardPage()
         {
             InitializeComponent();
-            
-
         }
 
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -71,7 +43,7 @@ namespace WpfApp6.Views.Pages.AdminPage
 
         private void RemoveSelectedItem_Click(object sender, RoutedEventArgs e)
         {
-            try
+            try                                       
             {
                 SelectedService = (Service)ListService.SelectedItem;
                 if (SelectedService != null)
@@ -80,6 +52,7 @@ namespace WpfApp6.Views.Pages.AdminPage
                         DbContextObject.db.Service.Remove(SelectedService);
                         DbContextObject.db.SaveChanges();
                         Services.Remove(SelectedService);
+                        --counts;
                     }
             }
             catch (Exception ex)
