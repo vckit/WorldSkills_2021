@@ -1,0 +1,95 @@
+﻿<Page x:Class="Sessia.Views.Pages.ServiceListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sessia.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" 
+      d:DesignWidth="800"
+      Title="ServiceListPage">
+
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.9*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Grid.Row="0">
+            <StackPanel
+                Margin="0 10"
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <TextBlock
+                    Text="Сортировать по:"/>
+                <ComboBox
+                    SelectionChanged="CmbSort_SelectionChanged"
+                    Name="CmbSort"
+                    Width="150">
+                    <ComboBoxItem Content="по убыванию"/>
+                    <ComboBoxItem Content="по возрастанию"/>
+                    <ComboBoxItem Content="скидка 0-5%"/>
+                    <ComboBoxItem Content="скидка 5-15%"/>
+                    <ComboBoxItem Content="скидка 15-30%"/>
+                    <ComboBoxItem Content="скидка 30-70%"/>
+                    <ComboBoxItem Content="скидка 70-100%"/>
+                    <ComboBoxItem Content="Все"/>
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+        
+        <ListView
+            Grid.Row="1"
+            MouseDoubleClick="ProductListView_MouseDoubleClick"
+            Name="ProductListView"
+            ItemsSource="{Binding service}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel
+                        Name="MainStackPanel"
+                        Orientation="Horizontal">
+                        <Image
+                            Width="120"
+                            Height="120"
+                            Source="{Binding MainImagePath}"/>
+
+                        <StackPanel
+                            Margin="10 5">
+                            <TextBlock Text="{Binding Title}"
+                                       FontSize="17"/>
+                            <TextBlock Text="{Binding Cost}"
+                                       FontSize="14"/>
+                            <TextBlock Text="{Binding DurationInSeconds}"
+                                       FontSize="14"/>
+                            <TextBlock Text="{Binding Discount}"
+                                       FontSize="14"/>
+                            <TextBlock Text="{Binding Description}"
+                                       FontSize="12"/>
+
+                            <StackPanel Orientation="Horizontal">
+                                <Button
+                                    Height="20"
+                                    Width="100"
+                                    Name="BtnUpdate"
+                                    Content="Редактировать"
+                                    Click="BtnUpdate_Click"
+                                    Margin="5 0"/>
+
+                                <Button
+                                    Name="BtnDelete"
+                                    Height="20"
+                                    Width="100"
+                                    Click="BtnDelete_Click"
+                                    Content="Удалить"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+    
+</Page>
