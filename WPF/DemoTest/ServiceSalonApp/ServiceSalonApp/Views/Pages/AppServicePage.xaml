@@ -1,0 +1,107 @@
+﻿<Page x:Class="ServiceSalonApp.Views.Pages.AppServicePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:p="clr-namespace:ServiceSalonApp.Properties"
+      mc:Ignorable="d" Loaded="Page_Loaded"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Услуги">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0">
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="10"
+                        Orientation="Horizontal">
+                <ComboBox Name="SortOrderComboBox"
+                          Width="150"
+                          SelectionChanged="SortOrderComboBox_SelectionChanged">
+                    <ComboBoxItem>По возрастанию</ComboBoxItem>
+                    <ComboBoxItem>По убыванию</ComboBoxItem>
+                </ComboBox>
+                <ComboBox Name="SortDiscountComboBox"
+                          Width="150"
+                          Margin="20,0,20,0"
+                          SelectionChanged="SortDiscountComboBox_SelectionChanged">
+                    <ComboBoxItem>от 0 до 5%</ComboBoxItem>
+                    <ComboBoxItem>от 5 до 15%</ComboBoxItem>
+                    <ComboBoxItem>от 15 до 30%</ComboBoxItem>
+                    <ComboBoxItem>от 30 до 70%</ComboBoxItem>
+                    <ComboBoxItem>от 70 до 100%</ComboBoxItem>
+                    <ComboBoxItem>Все</ComboBoxItem>
+                </ComboBox>
+
+                <TextBox Name="SearchTextBox"
+                         Width="150"
+                         TextChanged="SearchTextBox_TextChanged"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <DataGrid Name="DataService"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Background="{Binding BackgroundColor}">
+                                    <Image Height="100" Width="100" Source="{Binding Photo}"/>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Title}"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding Cost, StringFormat={}{0:#.#}}" Visibility="{Binding Visible}" TextDecorations="Strikethrough"/>
+                                            <TextBlock Text="   "/>
+                                            <TextBlock Text="{Binding Price, StringFormat={}{0:#.#}}"/>
+                                            <TextBlock Text=" рублей за "/>
+                                            <TextBlock Text="{Binding Minute}"/>
+                                            <TextBlock Text=" минут"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Visibility="{Binding Visible}">
+                                            <TextBlock Text="*"/>
+                                            <TextBlock Text=" скидка "/>
+                                            <TextBlock Text="{Binding Discount}"/>
+                                            <TextBlock Text="%"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Visibility="{Binding Source={x:Static p:Settings.Default}, Path=isAdmin}">
+                                            <Button Click="ButtonEdit_Click" Background="White" Name="ButtonEdit" Content="Редактировать"/>
+                                            <Button Click="ButtonRemove_Click" Background="White" Name="ButtonRemove" Margin="10,0,0,0" Content="Удалить"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <TextBlock Name="NotesCount" HorizontalAlignment="Right"/>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <StackPanel Visibility="{Binding Source={x:Static p:Settings.Default}, Path=isAdmin}"
+                        HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Orientation="Horizontal">
+                <Button Name="AddNoteButton" Click="AddNoteButton_Click" Content="Добавить"
+                        Style="{StaticResource ButtonFunctionStyle}"/>
+                <Button Name="EditNoteButton" Click="ReadNoteButton_Click" Content="Записать клиента"
+                        Margin="20,0,20,0"
+                        Style="{StaticResource ButtonFunctionStyle}"/>
+                <Button Name="RemoveNoteButton" Click="ViewNoteButton_Click" Content="Посмотреть записи"
+                        Style="{StaticResource ButtonFunctionStyle}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

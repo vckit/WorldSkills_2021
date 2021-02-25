@@ -1,0 +1,61 @@
+﻿<Page x:Class="ServiceSalonApp.Views.Pages.AppAddEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ServiceSalonApp.Views.Pages"
+      mc:Ignorable="d" FontSize="16"
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="Добавление/Редактирование услуг">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Width="400">
+            <StackPanel Name="VisibleID" Orientation="Horizontal">
+                <TextBlock Text="ID: "/>
+                <TextBlock Name="txbId"/>
+            </StackPanel>
+            <TextBlock Text="Наименование: "/>
+            <TextBox Name="txbTitle"/>
+            <TextBlock Text="Стоимость: "/>
+            <TextBox Name="txbCost"/>
+            <TextBlock Text="Длительность: "/>
+            <TextBox Name="txbDuration"/>
+            <TextBlock Text="Описание: "/>
+            <TextBox Name="txbDescription"/>
+            <TextBlock Text="Скидка: "/>
+            <TextBox Name="txbDiscount"/>
+            <TextBlock Text="Изображение: "/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <StackPanel Orientation="Vertical">
+                        <Image Name="ImageMain" Width="190" Height="158"/>
+                        <Button x:Name="ButtonLoadMainImage" Click="ButtonLoadMainImage_Click" Content="Добавить основное фото"
+                                FontSize="14"/>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <StackPanel>
+                        <ListView Width="190" Height="150" Name="lvPhotos"/>
+                        <TextBlock Background="CadetBlue" Name="txtLoadPhoto" 
+                                   FontSize="11"
+                                   AllowDrop="True" DragEnter="txtLoadPhoto_DragEnter" Drop="txtLoadPhoto_Drop">
+                            Перетащите сюда для добавления
+                            <LineBreak/>
+                            дополнительных изображений
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            <StackPanel>
+                <Button Content="Удалить все изображения" Name="RemovePhoto" Click="RemovePhoto_Click"/>
+                <Button Content="Сохранить" Click="Save_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

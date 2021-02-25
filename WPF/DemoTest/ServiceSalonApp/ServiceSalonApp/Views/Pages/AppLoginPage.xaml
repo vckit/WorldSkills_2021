@@ -1,0 +1,42 @@
+﻿<Page x:Class="ServiceSalonApp.Views.Pages.AppLoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ServiceSalonApp.Views.Pages"
+      mc:Ignorable="d" FontSize="14"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Окно входа">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Код Администратора: "/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBox Name="CodeAdminTextBox" Width="250"
+                             Text="0000"
+                             PreviewTextInput="CodeAdminTextBox_PreviewTextInput"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1"
+                            Margin="0,5,0,0"
+                            Grid.Row="1">
+                    <Button Content="Войти" FontSize="12" IsDefault="True"
+                            Click="LoginButton_Click"/>
+                    <Button Content="Войти как гость" FontSize="12"
+                            Click="GostLoginButton_Click"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>
