@@ -72,6 +72,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Pages\AdminPage\MoreServicesPhotosPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Pages\UserPage\DataViewPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -147,6 +151,9 @@
     </Compile>
     <Compile Include="Views\Pages\AdminPage\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\AdminPage\MoreServicesPhotosPage.xaml.cs">
+      <DependentUpon>MoreServicesPhotosPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\UserPage\DataViewPage.xaml.cs">
       <DependentUpon>DataViewPage.xaml</DependentUpon>

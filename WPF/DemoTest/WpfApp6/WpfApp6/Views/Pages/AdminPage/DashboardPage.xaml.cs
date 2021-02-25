@@ -68,5 +68,10 @@ namespace WpfApp6.Views.Pages.AdminPage
             counts = Services.Count();
             DataContext = this;
         }
+
+        private void ListService_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new MoreServicesPhotosPage((Service)ListService.SelectedItem));
+        }
     }
 }
