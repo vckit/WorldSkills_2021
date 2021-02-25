@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище dbHelloWorldModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="A_Gender">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="H_Department">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="L_Group">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDDepartment" Type="int" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Course" Type="int" />
+        </EntityType>
+        <EntityType Name="T_User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Patronymic" Type="nvarchar" MaxLength="50" />
+          <Property Name="Instagram" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Phone" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="Vk" Type="varchar" MaxLength="50" />
+          <Property Name="Image" Type="varchar(max)" />
+          <Property Name="IDGender" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="IDGroup" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_L_Group_H_Department">
+          <End Role="H_Department" Type="Self.H_Department" Multiplicity="0..1" />
+          <End Role="L_Group" Type="Self.L_Group" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="H_Department">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="L_Group">
+              <PropertyRef Name="IDDepartment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_User_A_Gender">
+          <End Role="A_Gender" Type="Self.A_Gender" Multiplicity="1" />
+          <End Role="T_User" Type="Self.T_User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="A_Gender">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="T_User">
+              <PropertyRef Name="IDGender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_User_L_Group">
+          <End Role="L_Group" Type="Self.L_Group" Multiplicity="1" />
+          <End Role="T_User" Type="Self.T_User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="L_Group">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="T_User">
+              <PropertyRef Name="IDGroup" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище dbHelloWorldModelContainer">
+          <EntitySet Name="A_Gender" EntityType="Self.A_Gender" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="H_Department" EntityType="Self.H_Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="L_Group" EntityType="Self.L_Group" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_User" EntityType="Self.T_User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_L_Group_H_Department" Association="Self.FK_L_Group_H_Department">
+            <End Role="H_Department" EntitySet="H_Department" />
+            <End Role="L_Group" EntitySet="L_Group" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_User_A_Gender" Association="Self.FK_T_User_A_Gender">
+            <End Role="A_Gender" EntitySet="A_Gender" />
+            <End Role="T_User" EntitySet="T_User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_User_L_Group" Association="Self.FK_T_User_L_Group">
+            <End Role="L_Group" EntitySet="L_Group" />
+            <End Role="T_User" EntitySet="T_User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbHelloWorldModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="A_Gender">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="T_User" Relationship="Self.FK_T_User_A_Gender" FromRole="A_Gender" ToRole="T_User" />
+        </EntityType>
+        <EntityType Name="H_Department">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="L_Group" Relationship="Self.FK_L_Group_H_Department" FromRole="H_Department" ToRole="L_Group" />
+        </EntityType>
+        <EntityType Name="L_Group">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDDepartment" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Course" Type="Int32" />
+          <NavigationProperty Name="H_Department" Relationship="Self.FK_L_Group_H_Department" FromRole="L_Group" ToRole="H_Department" />
+          <NavigationProperty Name="T_User" Relationship="Self.FK_T_User_L_Group" FromRole="L_Group" ToRole="T_User" />
+        </EntityType>
+        <EntityType Name="T_User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Instagram" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Vk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IDGender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="IDGroup" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="A_Gender" Relationship="Self.FK_T_User_A_Gender" FromRole="T_User" ToRole="A_Gender" />
+          <NavigationProperty Name="L_Group" Relationship="Self.FK_T_User_L_Group" FromRole="T_User" ToRole="L_Group" />
+        </EntityType>
+        <Association Name="FK_T_User_A_Gender">
+          <End Role="A_Gender" Type="Self.A_Gender" Multiplicity="1" />
+          <End Role="T_User" Type="Self.T_User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="A_Gender">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="T_User">
+              <PropertyRef Name="IDGender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_L_Group_H_Department">
+          <End Role="H_Department" Type="Self.H_Department" Multiplicity="0..1" />
+          <End Role="L_Group" Type="Self.L_Group" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="H_Department">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="L_Group">
+              <PropertyRef Name="IDDepartment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_User_L_Group">
+          <End Role="L_Group" Type="Self.L_Group" Multiplicity="1" />
+          <End Role="T_User" Type="Self.T_User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="L_Group">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="T_User">
+              <PropertyRef Name="IDGroup" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbHelloWorldEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="A_Gender" EntityType="Self.A_Gender" />
+          <EntitySet Name="H_Department" EntityType="Self.H_Department" />
+          <EntitySet Name="L_Group" EntityType="Self.L_Group" />
+          <EntitySet Name="T_User" EntityType="Self.T_User" />
+          <AssociationSet Name="FK_T_User_A_Gender" Association="Self.FK_T_User_A_Gender">
+            <End Role="A_Gender" EntitySet="A_Gender" />
+            <End Role="T_User" EntitySet="T_User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_L_Group_H_Department" Association="Self.FK_L_Group_H_Department">
+            <End Role="H_Department" EntitySet="H_Department" />
+            <End Role="L_Group" EntitySet="L_Group" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_User_L_Group" Association="Self.FK_T_User_L_Group">
+            <End Role="L_Group" EntitySet="L_Group" />
+            <End Role="T_User" EntitySet="T_User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище dbHelloWorldModelContainer" CdmEntityContainer="dbHelloWorldEntities">
+          <EntitySetMapping Name="A_Gender">
+            <EntityTypeMapping TypeName="dbHelloWorldModel.A_Gender">
+              <MappingFragment StoreEntitySet="A_Gender">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="H_Department">
+            <EntityTypeMapping TypeName="dbHelloWorldModel.H_Department">
+              <MappingFragment StoreEntitySet="H_Department">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="L_Group">
+            <EntityTypeMapping TypeName="dbHelloWorldModel.L_Group">
+              <MappingFragment StoreEntitySet="L_Group">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDDepartment" ColumnName="IDDepartment" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Course" ColumnName="Course" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_User">
+            <EntityTypeMapping TypeName="dbHelloWorldModel.T_User">
+              <MappingFragment StoreEntitySet="T_User">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+                <ScalarProperty Name="Instagram" ColumnName="Instagram" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Vk" ColumnName="Vk" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="IDGender" ColumnName="IDGender" />
+                <ScalarProperty Name="IDGroup" ColumnName="IDGroup" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
