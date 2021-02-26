@@ -119,6 +119,9 @@
     <Compile Include="Views\Pages\AppAddEditPage.xaml.cs">
       <DependentUpon>AppAddEditPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Pages\AppCreateNotePage.xaml.cs">
+      <DependentUpon>AppCreateNotePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\AppLoginPage.xaml.cs">
       <DependentUpon>AppLoginPage.xaml</DependentUpon>
     </Compile>
@@ -126,7 +129,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Pages\AppNotesPage.xaml">
+    <Page Include="Views\Pages\AppCreateNotePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\AppNoteViewPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,8 +149,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Views\Pages\AppNotesPage.xaml.cs">
-      <DependentUpon>AppNotesPage.xaml</DependentUpon>
+    <Compile Include="Views\Pages\AppNoteViewPage.xaml.cs">
+      <DependentUpon>AppNoteViewPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\AppServicePage.xaml.cs">
       <DependentUpon>AppServicePage.xaml</DependentUpon>
@@ -193,6 +200,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="Assests\school_logo.ico" />
+    <Resource Include="Assests\school_logo.png" />
     <Content Include="Models\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model.Context.cs</LastGenOutput>

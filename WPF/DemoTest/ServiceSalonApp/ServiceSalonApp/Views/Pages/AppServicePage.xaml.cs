@@ -111,14 +111,14 @@ namespace ServiceSalonApp.Views.Pages
 
         private void ViewNoteButton_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AppNotesPage());
+                NavigationService.Navigate(new AppNoteViewPage());
         }
 
         private void ReadNoteButton_Click(object sender, RoutedEventArgs e)
         {
             var service = DataService.SelectedItem as Service;
             if (service != null)
-                NavigationService.Navigate(new AppAddEditPage(service));
+                NavigationService.Navigate(new AppCreateNotePage(service));
             else
                 MessageBox.Show("Выберите запись!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
         }

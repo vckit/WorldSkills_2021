@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ServiceSalonApp"
-        mc:Ignorable="d"
-        Title="{Binding ElementName=MainFrame, Path=Content.Title}" Height="600" Width="1080">
+        mc:Ignorable="d" Icon="/Assests/school_logo.ico"
+        Title="{Binding ElementName=MainFrame, Path=Content.Title}" Height="650" Width="1180">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
