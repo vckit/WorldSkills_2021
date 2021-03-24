@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a876b8b8abc84c8eacd84f8452d17463" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="TestBaseSecondModel.Analyzer" Width="1.5" PointX="12.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestBaseSecondModel.Blood" Width="1.5" PointX="12.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestBaseSecondModel.BloodService" Width="1.5" PointX="14.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestBaseSecondModel.History" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestBaseSecondModel.InsuraneCompany" Width="1.5" PointX="8" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestBaseSecondModel.InsuraneType" Width="1.5" PointX="5.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestBaseSecondModel.Patient" Width="1.5" PointX="10.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestBaseSecondModel.PatientData" Width="1.5" PointX="8" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestBaseSecondModel.Role" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestBaseSecondModel.Service" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestBaseSecondModel.User" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestBaseSecondModel.UserService" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="TestBaseSecondModel.FK_BloodService_Analyzer" ManuallyRouted="false" />
+        <AssociationConnector Association="TestBaseSecondModel.FK_Blood_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="TestBaseSecondModel.FK_BloodService_Blood" ManuallyRouted="false" />
+        <AssociationConnector Association="TestBaseSecondModel.FK_BloodService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="TestBaseSecondModel.FK_History_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="TestBaseSecondModel.FK_Patient_InsuraneCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="TestBaseSecondModel.FK_PatientData_InsuraneType" ManuallyRouted="false" />
+        <AssociationConnector Association="TestBaseSecondModel.FK_Patient_PatientData" ManuallyRouted="false" />
+        <AssociationConnector Association="TestBaseSecondModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="TestBaseSecondModel.FK_UserService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="TestBaseSecondModel.FK_UserService_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
